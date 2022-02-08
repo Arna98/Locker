@@ -24,13 +24,18 @@ echo.
 echo.
 Set /p Select=Please select a number from the menu: 
 echo %Select%
-if %Select% == 1 goto MDmyfolder
-else if %Select% == 2 goto Lock
-else if %Select% == 3 goto Unlock
-else if %Select% == 4 goto Remove
-else if %Select% == 5 goto End
-else (
-    cls
+if %Select% == 1 (
+    goto MDmyfolder
+) else if %Select% == 2 (
+    goto Lock
+) else if %Select% == 3 (
+    goto Unlock
+) else if %Select% == 4 (
+    goto Remove
+) else if %Select% == 5 (
+    goto End
+) else (
+    
     echo Invalid choice, try again!
     timeout /t 7
     cls
